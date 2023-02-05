@@ -190,7 +190,7 @@
             "title": "image name",
             "type": "string"
           },
-          "start offset": {
+          "start_offset": {
             "title": "Position of element (0,*) wrt product start",
             "type": "number"
           },
