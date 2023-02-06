@@ -40,7 +40,7 @@
                 "additionalProperties": {
                   "properties": {
                     "eopf:image_size": false,
-					"eopf:pixel_classification": false
+		    "eopf:pixel_classification": false
                   }
                 }
               }
@@ -51,7 +51,7 @@
               "properties": {
                 "properties": {
                   "eopf:image_size": false,
-				  "eopf:pixel_classification": false				  
+		  "eopf:pixel_classification": false				  
                 }
               }
             }
