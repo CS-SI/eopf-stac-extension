@@ -12,7 +12,7 @@ This document explains the fields of the EOPF extension to the
 [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification.
 
 EOPF is the framework of Copernicus Sentinel data processors under development by ESA.
-See [EOPF site] (https://eopf.copernicus.eu/) for context.
+See [EOPF site](https://eopf.copernicus.eu/) for context.
 
 It is strongly recommended to use the other STAC extensions eo, view, processing, sat and sci with the eopf extension.
 
