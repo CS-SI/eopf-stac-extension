@@ -6,12 +6,13 @@
 - **Scope:** Item, Collection
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
 - **Owner**: CS Group France
-- **History:** TBD
+- **History:** Proposal in preparation
 
 This document explains the fields of the EOPF extension to the
 [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification.
 
 EOPF is the framework of Copernicus Sentinel data processors under development by ESA.
+See [EOPF site] (https://eopf.copernicus.eu/) for context.
 
 It is strongly recommended to use the other STAC extensions eo, view, processing, sat and sci with the eopf extension.
 
@@ -19,7 +20,7 @@ It is strongly recommended to use the other STAC extensions eo, view, processing
 
 | Field Name               | Type                                                   | Description                      |
 | ------------------------ | ------------------------------------------------------ | -------------------------------- |
-| eopf:resolutions         | \[[Resolutions Object](#resolutions-object)]           | Dictionary of ground resolutions |
+| eopf:resolutions         | object                                                 | Dictionary of ground resolutions |
 | eopf:type                | string                                                 | Product type                     |
 | eopf:timeline            | string                                                 | Processing timeline              |
 | eopf:collection          | string                                                 | Product collection identifier    |
@@ -27,8 +28,8 @@ It is strongly recommended to use the other STAC extensions eo, view, processing
 | eopf:data_take_id        | string                                                 | Unique acquisition identifier    |
 | eopf:intrument_mode      | string                                                 | Instrument mode                  |
 | eopf:instrument_swath    | string                                                 | Instrument swath                 |
-| eopf:image_size          | \[[Image Size Object](#image_size-object)]             | Image sizes in pixels            |
-| eopf:pixel_classification| \[[Pixel Quality Object](#pixel_classification-object)]| Pixel quality classification     |
+| eopf:image_size          | \[[Image Size Object](#Image Size Object)]             | Image sizes in pixels            |
+| eopf:pixel_classification| \[[Pixel Quality Object](#Pixel Classification Object)]| Pixel quality classification     |
 
 
 ### Additional Information
