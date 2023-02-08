@@ -46,7 +46,7 @@ An Item is only allowed to use `eopf:image_size` in its Properties if it has at 
 
 #### eopf:pixel_classification
 
-`eopf:pixel_classification` provides the amount of pixels with a quality classification, in counts and / or in percentage.
+`eopf:pixel_classification` provides the amount of pixels with a quality classification, in counts and / or in percentage, related to the best resolution raster.
 An Item is only allowed to use `eopf:pixel_classification` in its Properties if it has at least one asset with a defined pixel class array.
 
 
