@@ -1,27 +1,27 @@
 
     "stac_discovery":{
-       "type":"Text(Feature)",
-       "stac_version":"Text(1.0.0)",
+       "type":"Feature",
+       "stac_version":"1.0.0",
        "stac_extensions":[
-          "Text(https://stac-extensions.github.io/eopf/v1.0.0/schema.json)",
-		  "Text(https://github.com/stac-extensions/eo/blob/main/json-schema/schema.json)",
-		  "Text(https://github.com/stac-extensions/sat/blob/main/json-schema/schema.json)",
-		  "Text(https://github.com/stac-extensions/view/blob/main/json-schema/schema.json)",
-		  "Text(https://github.com/stac-extensions/scientific/blob/main/json-schema/schema.json)",
-		  "Text(https://github.com/stac-extensions/processing/blob/main/json-schema/schema.json)",
-		  "Text(https://github.com/stac-extensions/eopf/blob/main/json-schema/schema.json)"
+          "https://stac-extensions.github.io/eopf/v1.0.0/schema.json",
+          "https://github.com/stac-extensions/eo/blob/main/json-schema/schema.json",
+          "https://github.com/stac-extensions/sat/blob/main/json-schema/schema.json",
+	  "https://github.com/stac-extensions/view/blob/main/json-schema/schema.json",
+	  "https://github.com/stac-extensions/scientific/blob/main/json-schema/schema.json",
+	  "https://github.com/stac-extensions/processing/blob/main/json-schema/schema.json",
+          "https://github.com/stac-extensions/eopf/blob/main/json-schema/schema.json"
        ],
        "id":"metadataSection/metadataObject[@ID='generalProductInformation']/metadataWrap/xmlData/s1sarl1:standAloneProductInformation/s1sarl1:productClassDescription",
        "geometry":"to_geoJson(metadataSection/metadataObject[@ID='measurementFrameSet']/metadataWrap/xmlData/safe:frameSet/safe:frame/safe:footPrint/gml:coordinates)",
        "bbox":"to_bbox(metadataSection/metadataObject[@ID='measurementFrameSet']/metadataWrap/xmlData/safe:frameSet/safe:frame/safe:footPrint/gml:coordinates)",
        "properties":{
-          "datetime":"Text(null)",
+          "datetime":"null",
           "start_datetime":"metadataSection/metadataObject[@ID='acquisitionPeriod']/metadataWrap/xmlData/safe:acquisitionPeriod/safe:startTime",
           "end_datetime":"metadataSection/metadataObject[@ID='acquisitionPeriod']/metadataWrap/xmlData/safe:acquisitionPeriod/safe:stopTime",
           "created":"metadataSection/metadataObject[@ID='processing']/metadataWrap/xmlData/safe:processing/safe:resource[@role='Level-1*']/safe:processing/@stop",
           "platform":"concat(metadataSection/metadataObject[@ID='platform']/metadataWrap/xmlData/safe:platform/safe:familyName, metadataSection/metadataObject[@ID='platform']/metadataWrap/xmlData/safe:platform/safe:number)",
-          "instrument":"metadataSection/metadataObject[@ID='platform']/metadataWrap/xmlData/safe:platform/safe:instrument/safe:familyName",
-          "mission":"Text(Sentinel-1)",
+          "instrument":"Synthetic Aperture Radar",
+          "mission":"Sentinel-1",
           "sat:anx_datetime":"metadataSection/metadataObject[@ID='acquisitionPeriod']/metadataWrap/xmlData/safe:acquisitionPeriod/safe:extension/s1:timeANX/s1:ascendingNodeTime",
           "sat:anx_datetime":"metadataSection/metadataObject[@ID='measurementOrbitReference']/metadataWrap/xmlData/safe:orbitReference/safe:extension/s1:orbitProperties/s1:ascendingNodeTime",
           "sat:absolute_orbit":"to_int(metadataSection/metadataObject[@ID='measurementOrbitReference']/metadataWrap/xmlData/safe:orbitReference/safe:orbitNumber[@type='start'])",
@@ -35,7 +35,7 @@
           "eopf:timeline":"metadataSection/metadataObject[@ID='generalProductInformation']/metadataWrap/xmlData/s1sarl1:standAloneProductInformation/s1sarl1:productTimelinessCategory",
           "processing:facility":"metadataSection/metadataObject[@ID='processing']/metadataWrap/xmlData/safe:processing/safe:facility",
           "processing:sofware":"metadataSection/metadataObject[@ID='processing']/metadataWrap/xmlData/safe:processing/safe:facility/safe:software",
-          "processing:level":"Text(L1)",
+          "processing:level":"L1",
           "providers":[
              {
                 "name":"metadataSection/metadataObject[@ID='processing']/metadataWrap/xmlData/safe:processing/safe:resource[@role='Level-1*']/safe:processing/safe:facility/@name",
@@ -53,12 +53,12 @@
        },
        "links":[
           {
-             "rel":"Text(self)",
-             "href":"Text(./.zattrs.json)",
-             "type":"Text(application/json)"
+             "rel":"self",
+             "href":"./.zattrs.json",
+             "type":"application/json"
           }
        ],
        "assets":[
 
        ]
-    },
+    }
