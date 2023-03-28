@@ -26,7 +26,7 @@ It is strongly recommended to use the other STAC extensions eo, view, processing
 | eopf:collection          | string                                                 | Product collection identifier    |
 | eopf:processing_baseline | string                                                 | Processing baseline identifier   |
 | eopf:data_take_id        | string                                                 | Unique acquisition identifier    |
-| eopf:intrument_mode      | string                                                 | Instrument mode                  |
+| eopf:instrument_mode     | string                                                 | Instrument mode                  |
 | eopf:instrument_swath    | string                                                 | Instrument swath                 |
 | eopf:image_size          | \[[Image Size Object](#image-size-object)]             | Image sizes in pixels            |
 | eopf:pixel_classification| \[[Pixel Quality Object](#pixel-classification-object)]| Pixel quality classification     |
