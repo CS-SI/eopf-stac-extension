@@ -23,8 +23,7 @@ It is strongly recommended to use the other STAC extensions eo, view, processing
 | eopf:resolutions         | object                                                 | Dictionary of ground resolutions |
 | eopf:type                | string                                                 | Product type                     |
 | eopf:timeline            | string                                                 | Processing timeline              |
-| eopf:collection          | string                                                 | Product collection identifier    |
-| eopf:processing_baseline | string                                                 | Processing baseline identifier   |
+| eopf:baseline            | string                                                 | Processing baseline identifier   |
 | eopf:data_take_id        | string                                                 | Unique acquisition identifier    |
 | eopf:instrument_mode     | string                                                 | Instrument mode                  |
 | eopf:instrument_swath    | string                                                 | Instrument swath                 |
@@ -36,9 +35,18 @@ It is strongly recommended to use the other STAC extensions eo, view, processing
 
 #### eopf:resolutions
 
-`eopf:resolutions` provides a dictionary of image resolution per type of image in the product.
-It is recommended to provide at least the best resolution in the product. 
- 
+`eopf:resolutions` provides a dictionary of image spatial resolution per type of image in the product.
+If the product contains only one type of image, `gsd` can be used instead. 
+
+#### eopf:timeline
+
+`eopf:timeline` provides the information on the processing time lapse. 
+It can be Near Real Time (NRT), Short Time Critical (STC), Non Time Critical (NTC), etc.
+
+#### eopf:baseline
+
+`eopf:baseline` provides the identification of the processing baseline, linked to specific versions and configurations. 
+
 #### eopf:image_size
 
 `eopf:image_size` provides the sizes in rows and columns of each image in the product, as well as its position.
