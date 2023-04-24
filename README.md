@@ -22,7 +22,7 @@ It is strongly recommended to use the other STAC extensions eo, view, processing
 | ------------------------ | ------------------------------------------------------ | -------------------------------- |
 | eopf:resolutions         | object                                                 | Dictionary of ground resolutions |
 | eopf:type                | string                                                 | Product type                     |
-| eopf:timeline            | string                                                 | Processing timeline              |
+| eopf:timeline            | string                                                 | Processing timeline indicator    |
 | eopf:baseline            | string                                                 | Processing baseline identifier   |
 | eopf:data_take_id        | string                                                 | Unique acquisition identifier    |
 | eopf:instrument_mode     | string                                                 | Instrument mode                  |
@@ -35,7 +35,8 @@ It is strongly recommended to use the other STAC extensions eo, view, processing
 
 #### eopf:resolutions
 
-`eopf:resolutions` provides a dictionary of image spatial resolution per type of image in the product.
+`eopf:resolutions` provides a dictionary of image spatial ground resolution, in m, per type of image in the product.
+This dictionary allows to list ground-resolution values for all named rasters contained in the data. 
 If the product contains only one type of image, `gsd` can be used instead. 
 
 #### eopf:timeline
@@ -51,11 +52,17 @@ It can be Near Real Time (NRT), Short Time Critical (STC), Non Time Critical (NT
 
 `eopf:image_size` provides the sizes in rows and columns of each image in the product, as well as its position.
 An Item is only allowed to use `eopf:image_size` in its Properties if it has at least one asset with a defined image size array.
+This field contains at least the raster dimensions in x (columns) and y (rows) for the highest resolution data in the product. 
+For multi-resolution data or rasters containing tie-point variables, the complete list of sizes can be provided too.
+Optionally, the extract position of the image in offsets for element (0,0) on the swath can be provided too.
 
 #### eopf:pixel_classification
 
-`eopf:pixel_classification` provides the amount of pixels with a quality classification, in counts and / or in percentage, related to the best resolution raster.
+`eopf:pixel_classification` provides the amount of pixels with a quality class, in counts and / or in percentage, related to the best resolution raster.
 An Item is only allowed to use `eopf:pixel_classification` in its Properties if it has at least one asset with a defined pixel class array.
+This field contains the classification structure with a short name for each class. 
+In case of multiple raster sizes, this structure contains only the classes for the highest resolution data. 
+One of the fields, count or percent, is required to be set, but both can be used at the same time.
 
 
 ### Image Size Object
