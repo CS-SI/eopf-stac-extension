@@ -21,7 +21,7 @@ It is strongly recommended to use the other STAC extensions eo, view, processing
 | Field Name               | Type                                                   | Description                      |
 | ------------------------ | ------------------------------------------------------ | -------------------------------- |
 | eopf:data_strip_id       | string                                                 | Data strip identification        |
-| eopf:data_take_id        | string                                                 | Data taken identification        |
+| eopf:data_take_id        | string                                                 | Data take identification        |
 | eopf:instrument_mode     | string                                                 | Instrument mode                  |
 | eopf:instrument_configuration_id    | integer                                     | Instrument configuration         |
 | eopf:origin_datetime     | datetime                                               | ???                              |
