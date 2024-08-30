@@ -1,8 +1,20 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://stac-extensions.github.io/eopf/v1.0.0/schema.json#",
+  "$id": "https://stac-extensions.github.io/eopf/v1.0.0/schema.json",
   "title": "eopf extension for STAC",
-  "description": "STAC eopf extension for STAC items",
+  "description": "STAC eopf extension for STAC items and STAC collections",
+  "type": "object",
+  "required": [
+    "stac_extensions"
+  ],
+  "properties": {
+    "stac_extensions": {
+      "type": "array",
+      "contains": {
+        "const": "https://stac-extensions.github.io/eopf/v1.0.0/schema.json"
+      }
+    }
+  },
   "oneOf": [
     {
       "$comment": "This is the schema for STAC Items.",
@@ -27,49 +39,7 @@
                 "$ref": "#/definitions/fields"
               }
             }
-          },
-          "$comment": "The if-then-else below checks whether the eopf:image_size is given in assets or not. If yes, allows eopf:image_size in properties (else), otherwise, disallows eopf:image_size in properties (then).",
-          "$comment": "The if-then-else below checks whether the eopf:pixel_classification is given in assets or not. If yes, allows eopf:pixel_classification in properties (else), otherwise, disallows eopf:pixel_classification in properties (then).",
-          "if": {
-            "required": [
-              "assets"
-            ],
-            "properties": {
-              "assets": {
-                "type": "object",
-                "additionalProperties": {
-                  "properties": {
-                    "eopf:image_size": false,
-		    "eopf:pixel_classification": false
-                  }
-                }
-              }
-            }
-          },
-          "then": {
-            "properties": {
-              "properties": {
-                "properties": {
-                  "eopf:image_size": false,
-		  "eopf:pixel_classification": false				  
-                }
-              }
-            }
-          },
-          "else": {
-            "properties": {
-              "properties": {
-                "properties": {
-                  "eopf:image_size": {
-                    "$ref": "#/definitions/image_size"
-                  },
-                  "eopf:pixel_classification": {
-                    "$ref": "#/definitions/pixel_classification"
-                  }
-                }
-              }
-            }
-          }
+          },     
         },
         {
           "$ref": "#/definitions/stac_extensions"
@@ -118,7 +88,7 @@
         "stac_extensions": {
           "type": "array",
           "contains": {
-            "const": "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+            "const": "https://stac-extensions.github.io/eopf/v1.0.0/schema.json"
           }
         }
       }
@@ -126,112 +96,23 @@
     "fields": {
       "type": "object",
       "properties": {
-        "eopf:resolutions": {
-		  "title" : "ground resolutions",
-          "type" : "object",
-          "properties" : {
-            "image" : { "type": "string" },
-            "resolution" : { "type": "number" }
-          }
-		  "required": ["image", "resolution"]
-        }
-        "eopf:type": {
-          "title": "Product Type",
-          "type": "string",
-		  "minLength": 9
-        },
-        "eopf:timeline": {
-          "title": "Processing Timeline",
-		  "type": "string",
-		  "length": 3
-        },
-		"eopf:collection": {
-		  "title": "Product Collection",
-		  "type": "string"
-        },
-		"eopf:processing_baseline": {
-		  "title": "Processing Baseline",
-		  "type": "string"
-        },
 		"eopf:data_take_id": {
-		  "title": "Unique Acquisition Identifier",
+		  "title": "Unique Data Take Identifier",
 		  "type": "string"
         },
 		"eopf:instrument_mode": {
 		  "title": "Instrument Mode",
 		  "type": "string"
         },
-		"eopf:instrument_swath": {
-		  "title": "Instrument Swath",
+		"eopf:data_strip_id": {
+		  "title": "Unique Data Strip Identifier",
 		  "type": "string"
         },	
-		"eopf:image_size": {
-          "$ref": "#/definitions/image_size"
-        },
-		"eopf:pixel_classification": {
-          "$ref": "#/definitions/pixel_classification"
-        },		
       },
       "patternProperties": {
         "^(?!eopf:)": {}
       },
       "additionalProperties": false
-    },
-    "image_size": {
-      "title": "image sizes in pixels",
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "title": "image size",
-        "type": "object",
-        "minProperties": 1,
-        "properties": {
-          "name": {
-            "title": "image name",
-            "type": "string"
-          },
-          "start_offset": {
-            "title": "Position of element (0,*) wrt product start",
-            "type": "number"
-          },
-          "track_offset": {
-            "title": "Position of element (*,0) wrt sub-satellite track",
-            "type": "number"
-          },
-          "rows": {
-            "title": "number of rows",
-            "type": "number"
-          },
-          "columns": {
-            "title": "number of columns",
-            "type": "number"
-		  }
-        }
-      }
     }
-	"pixel_classification": {
-      "title": "pixel quality",
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "title": "pixel classification",
-        "type": "object",
-        "minProperties": 1,
-        "properties": {
-          "name": {
-            "title": "classification name",
-            "type": "string"
-          },
-          "count": {
-            "title": "Number of pixels affected by flag",
-            "type": "number"
-          },
-          "percent": {
-            "title": "Percentage of pixels affected by flag",
-            "type": "number"
-          }
-        }
-      }
-    }	
   }
 }
