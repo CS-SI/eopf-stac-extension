@@ -96,18 +96,26 @@
     "fields": {
       "type": "object",
       "properties": {
-		"eopf:data_take_id": {
-		  "title": "Unique Data Take Identifier",
+		"eopf:datastrip_id": {
+		  "title": "Unique Datastrip Identifier",
+		  "type": "string"
+        },	
+	      	"eopf:datatake_id": {
+		  "title": "Unique Datatake Identifier",
 		  "type": "string"
         },
-		"eopf:instrument_mode": {
+		"eopf:instrument_configuration_id": {
+		  "title": "Instrument Configuration Identifier",
+		  "type": "integer"
+			
+        },	"eopf:instrument_mode": {
 		  "title": "Instrument Mode",
 		  "type": "string"
         },
-		"eopf:data_strip_id": {
-		  "title": "Unique Data Strip Identifier",
-		  "type": "string"
-        },	
+		"eopf:origin_datetime": {
+		  "title": "Origin Date Time ",
+		  "type": "datetime"
+        },
       },
       "patternProperties": {
         "^(?!eopf:)": {}
