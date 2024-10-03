@@ -1,7 +1,7 @@
 # eopf-stac-extension
 
 - **Title:** Earth Observation Processing Framework
-- **Identifier:** <https://stac-extensions.github.io/eopf/v1.0.0/schema.json>
+- **Identifier:** [<https://stac-extensions.github.io/eopf/v1.0.0/schema.json>](https://github.com/CS-SI/eopf-stac-extension/raw/refs/tags/v1.1.0/json-schema/schema.json)
 - **Field Name Prefix:** eopf
 - **Scope:** Item, Collection
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
