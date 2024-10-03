@@ -114,7 +114,8 @@
         },
 		"eopf:origin_datetime": {
 		  "title": "Origin Date Time ",
-		  "type": "datetime"
+		  "type": "string",
+	          "format": "date-time"
         },
       },
       "patternProperties": {
