@@ -39,7 +39,7 @@
                 "$ref": "#/definitions/fields"
               }
             }
-          },     
+          }
         },
         {
           "$ref": "#/definitions/stac_extensions"
@@ -116,7 +116,7 @@
 		  "title": "Origin Date Time ",
 		  "type": "string",
 	          "format": "date-time"
-        },
+        }
       },
       "patternProperties": {
         "^(?!eopf:)": {}
