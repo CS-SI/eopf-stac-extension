@@ -20,8 +20,8 @@ It is strongly recommended to use the other STAC extensions eo, view, processing
 
 | Field Name               | Type                                                   | Description                      |
 | ------------------------ | ------------------------------------------------------ | -------------------------------- |
-| eopf:datastrip_id       | string                                                 | Datastrip identification (specific to Sentinel-2). Example: S2A_OPER_MSI_L2A_DS_2APS_20240308T143352_S20240308T101546_N05.10|
-| eopf:datatake_id        | string                                                 | Datatake identification. Examples: for S1, datatake_id = 12032; for S2, datatake_id = GS2A_20231215T103431_044292_N05.10     |
+| eopf:datastrip_id       | string                                                  | Datastrip identification (specific to Sentinel-2). Example: S2A_OPER_MSI_L2A_DS_2APS_20240308T143352_S20240308T101546_N05.10 |
+| eopf:datatake_id        | string                                                  | Datatake identification. Examples: for S1, datatake_id = 12032; for S2, datatake_id = GS2A_20231215T103431_044292_N05.10     |
 | eopf:instrument_configuration_id    | integer                                     | The instrument configuration ID is specific to S1 SAR instrument and refers to the onboard configuration. Each version of it has a specific identifier called "Instrument Configuration ID" (ICID) corresponding to a specific number. For more information, cf. ["What is the instrument configuration ID (ICID) ?"](https://sar-mpc.eu/about/faq/) |
 | eopf:instrument_mode     | string                                                 | Instrument_mode (specific to Sentinel-2). Supports all datatake_type values: INS-NOBS, INS-EOBS, INS-DASC, INS-ABSR, INS-VIC, INS-RAW, INS-TST, INS-NOBD, INS-ABSD, INS-DASD, INS-VICD |
 | eopf:origin_datetime     | datetime                                               | Date time of the input data considered to create the item. Example: for PRIP, time of the availability of all CADU data on the CADIP/XBIP                             |
