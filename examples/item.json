@@ -42,7 +42,9 @@
     "end_datetime": "2022-06-14T13:03:43.459284Z",
     "created": "2022-06-14T13:57:37Z",
     "platform": "sentinel-3a",
-    "instruments": ["slstr"],
+    "instruments": [
+      "slstr"
+    ],
     "constellation": "sentinel-3",
     "sat:anx_datetime": "2022-06-14T12:40:20.457854",
     "sat:absolute_orbit": 32936,
