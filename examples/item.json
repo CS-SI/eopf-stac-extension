@@ -1,6 +1,6 @@
 {
   "type": "Feature",
-  "stac_version": "1.0.0",
+  "stac_version": "1.1.0",
   "stac_extensions": [
     "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json"
   ],
@@ -41,9 +41,9 @@
     "start_datetime": "2022-06-14T13:00:43.459284Z",
     "end_datetime": "2022-06-14T13:03:43.459284Z",
     "created": "2022-06-14T13:57:37Z",
-    "platform": "sentinel-3A",
-    "instrument": "slstr",
-    "mission": "sentinel-3",
+    "platform": "sentinel-3a",
+    "instruments": ["slstr"],
+    "constellation": "sentinel-3",
     "sat:anx_datetime": "2022-06-14T12:40:20.457854",
     "sat:absolute_orbit": 32936,
     "sat:relative_orbit": 238,
